@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ebc3f2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 35px;
+    height: 60px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Main Section */
+  .main {
+    position: relative;
+    background: url('/images/backgroundimg.jpg') no-repeat center center/cover;
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  section {
+    position: relative;
+    background: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+  
+  h2 {
+    color: #df9beb;
+  }
+  
+  form input, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #ebc3f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #ebc3f2;
+  }
+  
+  /* Styling for delete buttons inside events */
+  .event button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #ebc3f2;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  /* Reset Button Style */
+.reset-button {
+    background-color: #ebc3f2; /* Same purple as your header/footer */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px; /* Adjust spacing as needed */
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #d1a3e1; /* A slightly darker shade on hover */
+  }
+  
+  

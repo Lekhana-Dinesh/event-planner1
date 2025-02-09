@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Planner</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Lumière</h1>
+    <nav>
+      <ul>
+        <li><a href="#schedule-section">Schedule Event</a></li>
+        <li><a href="#attendee-section">Manage Attendees</a></li>
+        <li><a href="#venue-section">Find Venue</a></li>
+        <li><a href="#itinerary-section">Event Itinerary</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="main">
+      <section id="schedule-section">
+        <h2>Schedule your Event</h2>
+        <form id="schedule-form">
+          <input type="text" id="event-title" placeholder="Event Title" required>
+          <input type="datetime-local" id="event-date" required>
+          <button type="submit">Add to Calendar</button>
+        </form>
+        <div id="calendar-display"></div>
+      </section>
+
+      <section id="attendee-section">
+        <h2>Manage Attendees</h2>
+        <form id="attendee-form">
+          <input type="text" id="attendee-name" placeholder="Name" required>
+          <input type="email" id="attendee-email" placeholder="Email" required>
+          <button type="submit">Add Attendee</button>
+        </form>
+        <ul id="attendee-list"></ul>
+      </section>
+
+      <section id="venue-section">
+        <h2>Find a Venue</h2>
+        <form id="venue-id">
+          <input type="text" id="venue-location" placeholder="Location">
+          <input type="text" id="venue-keyword" placeholder="Keyword (e.g., restaurant, hall)" required>
+          <!-- Optional filter inputs -->
+          
+          <button type="submit">Search Venues</button>
+        </form>
+        <div id="venue-results"></div>
+      </section>
+
+
+      <section id="itinerary-section">
+        <h2>Your Event Itinerary</h2>
+        <div id="itinerary-display"></div>
+      </section>
+      <button class="reset-button" onclick="resetApp()">Reset</button>
+      
+
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Lumière Events. All rights reserved.</p>
+  </footer>
+  
+  <!-- Load Google API script first -->
+ 
+  <script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
