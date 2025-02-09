@@ -54,7 +54,7 @@ document.getElementById('schedule-form').addEventListener('submit', function(e) 
 
   // Add event to Google Calendar, passing the eventDiv to store event ID
   if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-    gapi.auth2.getAuthInstance().signIn({ prompt: 'select_account' }).then(() => {
+    gapi.auth2.getAuthInstance().signIn({ prompt: 'consent', ux_mode: 'redirect' }).then(() => {
       addEventToGoogleCalendar(title, dateTime, eventDiv);
     });
   } else {
@@ -185,7 +185,7 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     // Ready to interact with the Calendar API.
   } else {
-    gapi.auth2.getAuthInstance().signIn({ prompt: 'consent' });
+    gapi.auth2.getAuthInstance().signIn({ prompt: 'consent', ux_mode: 'redirect' });
   }
 }
 function addEventToGoogleCalendar(title, dateTime, eventDiv) {
