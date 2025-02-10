@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://apis.google.com https://accounts.google.com https://www.gstatic.com https://*.gstatic.com 'unsafe-inline' 'unsafe-eval' blob: data:;">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  
   <title>Event Planner</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -68,8 +69,8 @@
   </footer>
   
   <!-- Load Google API script first -->
+ <script src="https://accounts.google.com/gsi/client" async defer></script>
  
-  <script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
